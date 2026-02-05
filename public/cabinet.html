@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>OzonTools — Личный кабинет</title>
+  <link rel="stylesheet" href="./css/common.css"/>
+  <link rel="stylesheet" href="./css/cabinet.css"/>
+</head>
+<body>
+  <div class="topbar">
+    <img class="mini-logo" src="./assets/logo.png" alt=""/>
+    <div class="title">OzonTools</div>
+
+    <div class="spacer"></div>
+
+    <!-- ✅ вместо “Назад” — иконка профиля -->
+    <button class="icon-btn" id="userBtn" type="button" aria-label="Профиль">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M12 12c2.76 0 5-2.24 5-5S14.76 2 12 2 7 4.24 7 7s2.24 5 5 5Z"
+              stroke="rgba(255,255,255,0.82)" stroke-width="1.8"/>
+        <path d="M20 22c0-4.42-3.58-8-8-8s-8 3.58-8 8"
+              stroke="rgba(255,255,255,0.82)" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="bg page-pad">
+    <div class="wrap">
+      <div class="neon-box cabinet">
+        <div class="cab-head">
+          <div class="h">Личный кабинет</div>
+          <div class="muted sub">Автоматизация для тех кто ценит свое время</div>
+        </div>
+
+        <div class="empty">
+          <div class="empty-title">Войдите в ваш магазин Ozon, чтобы начать</div>
+
+          <button class="btn login-btn" id="loginBtn" type="button">
+            Войти в магазин
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ модалка “пока не сделали” -->
+  <div class="cab-modal" id="cabModal" aria-hidden="true">
+    <div class="cab-modal__panel" role="dialog" aria-modal="true">
+      <div class="cab-modal__text">Пока не сделали</div>
+      <button class="cab-modal__btn" id="cabModalOk" type="button">Ок</button>
+    </div>
+  </div>
+
+  <!-- ✅ выезжающее “окно пользователя” (drawer) -->
+  <div class="drawer" id="userDrawer" aria-hidden="true">
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Профиль пользователя">
+      <div class="drawer__head">
+        <div class="drawer__who">
+          <div class="drawer__avatar" aria-hidden="true"></div>
+          <div>
+            <div class="drawer__title">Профиль</div>
+            <div class="drawer__sub">Скоро тут будут настройки</div>
+          </div>
+        </div>
+
+        <button class="drawer__close" id="drawerClose" type="button" aria-label="Закрыть">×</button>
+      </div>
+
+      <div class="drawer__body">
+        <div class="drawer__card">
+          <div class="drawer__card-title">Настройки</div>
+          <div class="drawer__card-text">Пока пусто. Мы добавим сюда авторизацию, ключи и параметры.</div>
+        </div>
+
+        <button class="drawer__btn" id="drawerBack" type="button">Назад к подпискам</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/common.js"></script>
+  <script src="./js/cabinet.js"></script>
+</body>
+</html>

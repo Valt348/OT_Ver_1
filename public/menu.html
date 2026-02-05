@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>OzonTools — Меню</title>
+
+  <link rel="stylesheet" href="./css/common.css"/>
+  <link rel="stylesheet" href="./css/menu.css"/>
+</head>
+<body class="page-menu">
+  <div class="topbar">
+    <img class="mini-logo" src="./assets/logo.png" alt=""/>
+    <div class="title">OzonTools</div>
+    <div class="spacer"></div>
+
+    <button class="icon-btn" id="userBtn" type="button" aria-label="Войти">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M12 12c2.76 0 5-2.24 5-5S14.76 2 12 2 7 4.24 7 7s2.24 5 5 5Z"
+              stroke="rgba(255,255,255,0.82)" stroke-width="1.8"/>
+        <path d="M20 22c0-4.42-3.58-8-8-8s-8 3.58-8 8"
+              stroke="rgba(255,255,255,0.82)" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="bg page-pad">
+    <div class="wrap menu-stack">
+
+      <!-- ОСНОВНАЯ КАРТОЧКА -->
+      <div class="neon-box menu-card">
+        <div class="menu-text">
+          Это личный кабинет. Без подписки — он бесполезен.
+        </div>
+
+        <button class="btn btn-wide" id="toPlansBtn" type="button">
+          Оформить подписку
+        </button>
+      </div>
+
+      <!-- ✅ ОТДЕЛЬНАЯ КАРТОЧКА FAQ -->
+      <div class="neon-box faq-card" aria-label="FAQ">
+        <div class="faq-title">FAQ</div>
+
+        <button class="faq-item" type="button" aria-expanded="false">
+          <div class="faq-q">
+            <span>Что такое OzonTools?</span>
+            <span class="faq-ico" aria-hidden="true">+</span>
+          </div>
+          <div class="faq-a" aria-hidden="true">
+            Мы без понятия, вообще хз.
+          </div>
+        </button>
+
+        <button class="faq-item" type="button" aria-expanded="false">
+          <div class="faq-q">
+            <span>Меня посадят за использование данного бота?</span>
+            <span class="faq-ico" aria-hidden="true">+</span>
+          </div>
+          <div class="faq-a" aria-hidden="true">
+            Минимум 7 лет, если оформишь подписку то до 20 лет.
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sub-modal" id="subModal" aria-hidden="true">
+    <div class="sub-modal__panel" role="dialog" aria-modal="true">
+      <div class="sub-modal__text">Не-а. Сначала подписка</div>
+      <button class="sub-modal__btn" id="subModalOk" type="button">Ок</button>
+    </div>
+  </div>
+
+  <script src="./js/common.js"></script>
+  <script src="./js/menu.js"></script>
+</body>
+</html>

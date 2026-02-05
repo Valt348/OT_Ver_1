@@ -1,0 +1,188 @@
+/* public/css/index.css
+   Старт: улучшенный визуал + кнопка всегда видима + тёмно-фиолетовый градиент вернули
+*/
+
+.bg{
+  background:
+    radial-gradient(900px 520px at 12% 18%, rgba(51,212,255,0.10), transparent 62%),
+    radial-gradient(900px 520px at 86% 22%, rgba(255,91,189,0.09), transparent 62%),
+    radial-gradient(900px 600px at 54% 92%, rgba(123,92,255,0.10), transparent 62%),
+    linear-gradient(120deg, #04090e, #060a16 55%, #070818);
+}
+
+.bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(900px 420px at 50% 28%, rgba(255,255,255,0.05), transparent 65%),
+    radial-gradient(820px 520px at 48% 64%, rgba(123,92,255,0.05), transparent 70%),
+    radial-gradient(820px 520px at 56% 64%, rgba(51,212,255,0.04), transparent 70%);
+  opacity: .95;
+}
+
+.hero{
+  width: min(560px, 100%);
+  margin: 0 auto;
+  padding: 32px 30px 26px;
+
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)),
+    rgba(6, 8, 14, 0.62);
+
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    0 36px 110px rgba(0,0,0,0.70),
+    0 0 0 1px rgba(255,255,255,0.02) inset;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  text-align:center;
+
+  /* без opacity:0 — чтобы ничего не пропадало */
+  transform: translateY(0);
+  animation: heroIn .75s cubic-bezier(.18,1,.22,1);
+}
+
+.hero.neon-box::before{
+  opacity: 0;
+  animation: none;
+  filter: none;
+}
+.hero.neon-box::after{
+  border-color: rgba(255,255,255,0.09);
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: 24px;
+  pointer-events:none;
+  background: radial-gradient(520px 220px at 50% 0%,
+      rgba(123,92,255,0.10),
+      rgba(255,91,189,0.06),
+      transparent 70%);
+  opacity: .55;
+  filter: blur(14px);
+}
+
+.logo-wrap{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  position: relative;
+}
+
+.logo{
+  width: min(320px, 78vw);
+  height:auto;
+  filter:
+    drop-shadow(0 14px 30px rgba(0,0,0,0.70))
+    drop-shadow(0 0 22px rgba(123,92,255,0.10));
+  animation: logoFloat 5.8s ease-in-out infinite;
+}
+
+.logo-wrap::after{
+  content:"";
+  position:absolute;
+  width: min(280px, 64vw);
+  height: 18px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(255,255,255,0.12), transparent 70%);
+  filter: blur(10px);
+  opacity: .55;
+  pointer-events:none;
+}
+
+.beta{
+  margin-top: -8px;
+  color: rgba(255,255,255,0.72);
+  font-weight: 520;
+  letter-spacing: 0.18px;
+  animation: fadeUp .65s cubic-bezier(.18,1,.22,1);
+}
+
+/* ✅ КНОПКА “НАЧАТЬ” — ВИДИМА ВСЕГДА + тёмно-фиолетовый градиент */
+.hero .btn{
+  max-width: 440px;
+  padding: 12px 18px;
+  padding-right: 64px;
+  font-size: 14px;
+
+  background: linear-gradient(90deg,
+    rgba(14, 12, 26, 0.92),
+    rgba(40, 18, 56, 0.92),
+    rgba(86, 38, 120, 0.70),
+    rgba(14, 12, 26, 0.92)
+  ) !important;
+  background-size: 320% 100% !important;
+
+  /* два эффекта одновременно: лёгкое появление + перелив */
+  animation: fadeUpBtn .65s cubic-bezier(.18,1,.22,1), btnGlow 7s ease-in-out infinite;
+
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.35);
+  justify-content: center;
+  text-align: center;
+
+  /* важно: НЕ прячем кнопку */
+  opacity: 1 !important;
+}
+
+.hero .btn .arr{ display:none !important; }
+
+.hero .btn::after{
+  right: 18px;
+  opacity: .86;
+}
+
+.hero .btn:hover{ filter: brightness(1.08); }
+.hero .btn:active{ transform: scale(0.98); }
+
+@keyframes heroIn{
+  from{ transform: translateY(8px) scale(0.99); }
+  to{ transform: translateY(0) scale(1); }
+}
+
+@keyframes fadeUp{
+  from{ opacity: 0.85; transform: translateY(4px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+/* “появление” кнопки без ухода в opacity:0 */
+@keyframes fadeUpBtn{
+  from{ filter: brightness(0.95); transform: translateY(6px); }
+  to{ filter: brightness(1); transform: translateY(0); }
+}
+
+@keyframes logoFloat{
+  0%,100%{ transform: translateY(0); }
+  50%{ transform: translateY(-6px); }
+}
+
+@keyframes btnGlow{
+  0%{ background-position: 0% 50%; }
+  50%{ background-position: 100% 50%; }
+  100%{ background-position: 0% 50%; }
+}
+
+@media (max-width: 520px){
+  .hero{
+    padding: 26px 18px 20px;
+    gap: 12px;
+    border-radius: 20px;
+  }
+  .logo{ width: min(290px, 82vw); }
+  .hero .btn{ max-width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero, .beta, .hero .btn{ animation: none !important; }
+  .logo{ animation: none !important; }
+}

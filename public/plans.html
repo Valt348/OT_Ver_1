@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>OzonTools — Подписка</title>
+  <link rel="stylesheet" href="./css/common.css"/>
+  <link rel="stylesheet" href="./css/plans.css"/>
+</head>
+<body>
+  <div class="topbar">
+    <img class="mini-logo" src="./assets/logo.png" alt=""/>
+    <div class="title">OzonTools</div>
+
+    <div class="spacer"></div>
+
+    <button class="back-btn" id="backBtn">Назад</button>
+  </div>
+
+  <div class="bg page-pad">
+    <div class="wrap">
+      <div class="neon-box plans">
+        <h1 class="h1">Выберите подписку</h1>
+        <div class="sub muted">Проект пока в бета-версии. Цены со скидкой.</div>
+
+        <div class="grid" id="plansGrid">
+
+          <!-- Free -->
+          <div class="card plan-free"
+               data-plan="free_beta"
+               data-plan-title="Free Beta"
+               data-price="0">
+            <div class="card-top">
+              <div class="name">Free Beta</div>
+              <div class="price">
+                <span class="new">0₽</span>
+              </div>
+            </div>
+
+            <ul class="features">
+              <li>Бесплатный тест</li>
+            </ul>
+
+            <button class="btn pick" type="button">Выбрать</button>
+
+            <div class="more" aria-hidden="true">
+              <div class="more-inner">
+                <div class="more-text">тут будет более подробная информация</div>
+
+                <button class="cta" type="button">
+                  Начать тест
+                </button>
+
+                <button class="close-more" type="button">Свернуть</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Standart -->
+          <div class="card plan-std"
+               data-plan="standart"
+               data-plan-title="Standart"
+               data-price="2990">
+            <div class="card-top">
+              <div class="name">Standart</div>
+              <div class="price">
+                <span class="old">4 990₽</span>
+                <span class="new">2 990₽</span>
+              </div>
+            </div>
+
+            <ul class="features">
+              <li>Мониторинг позиций в поиске в реальном времени</li>
+              <li>Мониторинг рекламных кампаний (статусы, показы, клики, расходы и т.п.)</li>
+            </ul>
+
+            <button class="btn pick" type="button">Выбрать</button>
+
+            <div class="more" aria-hidden="true">
+              <div class="more-inner">
+                <div class="more-text">тут будет более подробная информация</div>
+
+                <button class="cta" type="button">
+                  Подключить — 2 990₽/месяц
+                </button>
+
+                <button class="close-more" type="button">Свернуть</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Standart+ -->
+          <div class="card plan-plus"
+               data-plan="standart_plus"
+               data-plan-title="Standart+"
+               data-price="4990">
+            <div class="card-top">
+              <div class="name">Standart+</div>
+              <div class="price">
+                <span class="old">6 990₽</span>
+                <span class="new">4 990₽</span>
+              </div>
+            </div>
+
+            <ul class="features">
+              <li>Всё, что в <u>Standart</u></li>
+              <li>Автонастройка ставки: фиксированная ставка N ₽ за клик</li>
+            </ul>
+
+            <button class="btn pick" type="button">Выбрать</button>
+
+            <div class="more" aria-hidden="true">
+              <div class="more-inner">
+                <div class="more-text">тут будет более подробная информация</div>
+
+                <button class="cta" type="button">
+                  Подключить — 4 990₽/месяц
+                </button>
+
+                <button class="close-more" type="button">Свернуть</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRO -->
+          <div class="card plan-plus"
+               data-plan="pro"
+               data-plan-title="Pro"
+               data-price="9990">
+            <div class="card-top">
+              <div class="name"
+                   style="background-image: linear-gradient(90deg,
+                     rgba(255, 70, 120, 0.98),
+                     rgba(255, 91, 189, 0.98),
+                     rgba(255, 210, 120, 0.98),
+                     rgba(215, 170, 85, 0.98)
+                   );">
+                Pro
+              </div>
+              <div class="price">
+                <span class="old">14 990₽</span>
+                <span class="new">9 990₽</span>
+              </div>
+            </div>
+
+            <ul class="features">
+              <li>Всё, что в <u>Standart+</u></li>
+              <li>Кликер с лимитом 500–1000 кликов/день</li>
+            </ul>
+
+            <button class="btn pick" type="button">Выбрать</button>
+
+            <div class="more" aria-hidden="true">
+              <div class="more-inner">
+                <div class="more-text">тут будет более подробная информация</div>
+
+                <button class="cta" type="button">
+                  Подключить — 9 990₽/месяц
+                </button>
+
+                <button class="close-more" type="button">Свернуть</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- UNLIMITED -->
+          <div class="card plan-plus"
+               data-plan="unlimited"
+               data-plan-title="Unlimited"
+               data-price="29990">
+            <div class="card-top">
+              <div class="name"
+                   style="background-image: linear-gradient(90deg,
+                     rgba(51, 212, 255, 0.98),
+                     rgba(75, 120, 255, 0.98),
+                     rgba(123, 92, 255, 0.98),
+                     rgba(40, 220, 170, 0.95)
+                   );">
+                Unlimited
+              </div>
+              <div class="price">
+                <span class="old">49 990₽</span>
+                <span class="new">29 990₽</span>
+              </div>
+            </div>
+
+            <ul class="features">
+              <li>Всё, что в <u>Pro</u></li>
+              <li>Безлимитный кликер</li>
+            </ul>
+
+            <button class="btn pick" type="button">Выбрать</button>
+
+            <div class="more" aria-hidden="true">
+              <div class="more-inner">
+                <div class="more-text">тут будет более подробная информация</div>
+
+                <button class="cta" type="button">
+                  Подключить — 29 990₽/месяц
+                </button>
+
+                <button class="close-more" type="button">Свернуть</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CUSTOM -->
+          <div class="card plan-plus"
+               data-plan="custom"
+               data-plan-title="Custom"
+               data-price="79990">
+            <div class="card-top">
+              <div class="name"
+                   style="background-image: linear-gradient(90deg,
+                     rgba(255, 230, 160, 0.99),
+                     rgba(215, 170, 85, 0.99),
+                     rgba(255, 255, 255, 0.95),
+                     rgba(123, 92, 255, 0.99),
+                     rgba(255, 230, 160, 0.99)
+                   );">
+                Custom
+              </div>
+              <div class="price">
+                <span class="old">99 990₽</span>
+                <span class="new">79 990₽</span>
+              </div>
+            </div>
+
+            <ul class="features">
+              <li>Всё, что в <u>Unlimited</u></li>
+              <li>Любой кастомный скрипт под ваши запросы (индивидуальная логистика/правила/автодействия)</li>
+            </ul>
+
+            <button class="btn pick" type="button">Выбрать</button>
+
+            <div class="more" aria-hidden="true">
+              <div class="more-inner">
+                <div class="more-text">тут будет более подробная информация</div>
+
+                <button class="cta" type="button">
+                  Подключить — 79 990₽/месяц
+                </button>
+
+                <button class="close-more" type="button">Свернуть</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/common.js"></script>
+  <script src="./js/plans.js"></script>
+</body>
+</html>
