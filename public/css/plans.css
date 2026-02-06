@@ -192,7 +192,7 @@
   font-size: 18px;
   letter-spacing: 0.15px;
 
-  background-size: 320% 100%;
+  background-size: 320% 400%;
   animation: nameFlow 7s ease-in-out infinite;
 
   -webkit-background-clip: text;
