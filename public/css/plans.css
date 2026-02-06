@@ -197,7 +197,7 @@
 
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: green;
 }
 @keyframes nameFlow{
   0%{ background-position: 0% 50%; }
