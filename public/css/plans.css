@@ -192,12 +192,12 @@
   font-size: 18px;
   letter-spacing: 0.15px;
 
-  background-size: 320% 400%;
+  background-size: 320% 100%;
   animation: nameFlow 7s ease-in-out infinite;
 
   -webkit-background-clip: text;
   background-clip: text;
-  color: green;
+  color: transparent;
 }
 @keyframes nameFlow{
   0%{ background-position: 0% 50%; }
